@@ -1,6 +1,6 @@
 # BIT Index Tabula
 
-**Official Journal of the BITcore Community**
+**Official Journal of the [BIThub Community](https://hub.bitwiki.org/)**
 
 ## Purpose
 

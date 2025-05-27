@@ -1,4 +1,4 @@
-name: Build LaTeX
+name: Build and Commit LaTeX PDF
 
 on:
   push:
@@ -9,9 +9,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
@@ -21,8 +29,13 @@ jobs:
           compiler: latexmk
           args: -pdf -file-line-error -interaction=nonstopmode
 
-      - name: Upload PDF
-        uses: actions/upload-artifact@v4
-        with:
-          name: main-pdf
-          path: Frameworks/main.pdf
+      - name: Commit and push PDF
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          cd Frameworks
+          git checkout "${{ github.ref_name }}"
+          git add main.pdf
+          git commit -m "Auto-compile LaTeX PDF on push"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
+          git push origin HEAD:${{ github.ref_name }}

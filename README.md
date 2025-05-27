@@ -1,17 +1,19 @@
-# BIT Index Tabula Draft
+# BIT Index Tabula: Drafts
 
 **Official Journal of the [BIThub Community](https://hub.bitwiki.org/)**
 
-# Submmission Flow
+# Submmission Flow - TBA
 > [Pull Request with Paper under main.tex organized in its respective folders] --> [Review by Our Team and Community] --> [Comments and Return or Submission]
+>
+> Submit Papers in Latex as main.tex and they auto-compile using Github actions into PDFs.
 
-## Purpose
+## Purpose - TBA
 
 The *BIT Index Tabula* serves as the formal publication platform for the BITcore community, advancing research in systems theory, recursive modeling, and structural logic.
 
-## Scope
+## Scope - TBA
 
-### Primary Domains
+### Primary Domains - TBA
 
 - Systems theory and recursive models
 - Logic structures and adaptive reasoning
@@ -20,31 +22,31 @@ The *BIT Index Tabula* serves as the formal publication platform for the BITcore
 - Computational frameworks
 - Structural complexity and reduction
 
-## Objectives
+## Objectives - TBA
 
 1. Disseminate rigorously reviewed, high-impact research.
 2. Establish BITcore as a leading center for recursive and systems-based inquiry.
 3. Ensure methodological integrity in all contributions.
 
-## Audience
+## Audience - TBA
 
 - Researchers in systems theory, logic, computation, and modeling
 - Analysts applying advanced structural reasoning
 - Interdisciplinary contributors aligned with BITcore methodologies
 
-## Publication Ethics
+## Publication Ethics - TBA
 
 - **Peer Review**: Double-blind and method-verified
 - **Originality**: No derivative or previously published material
 - **Transparency**: Full procedural visibility from submission to publication
 
-## Submission Guidelines
+## Submission Guidelines - TBA
 
 - Manuscripts must align with the journal’s scope and structure
 - Work must be original, unpublished, and methodologically sound
 - Adhere to official formatting and citation rules
 
-## Indexing and Access
+## Indexing and Access - TBA
 
 - Indexed in major academic and knowledge databases
 - Open access provided; authors retain usage rights

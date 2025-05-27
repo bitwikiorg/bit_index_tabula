@@ -1,7 +1,22 @@
-- name: LaTeX Action
-  uses: xu-cheng/latex-action@v2
-  with:
-    root_file: main.tex
-    working_directory: Frameworks
-    compiler: latexmk
-    args: -pdf -file-line-error -interaction=nonstopmode
+name: Build LaTeX
+
+on:
+  push:
+    paths:
+      - '**.tex'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: main.tex
+          working_directory: Frameworks
+          compiler: latexmk
+          args: -pdf -file-line-error -interaction=nonstopmode

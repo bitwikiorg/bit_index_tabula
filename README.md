@@ -1,6 +1,9 @@
-# BIT Index Tabula
+# BIT Index Tabula Draft
 
 **Official Journal of the [BIThub Community](https://hub.bitwiki.org/)**
+
+# Submmission Flow
+> [Pull Request with Paper under main.tex organized in its respective folders] --> [Review by Our Team and Community] --> [Comments and Return or Submission]
 
 ## Purpose
 

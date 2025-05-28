@@ -27,16 +27,19 @@ jobs:
           sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
 
       - name: Compile all .tex files
+        shell: bash
         run: |
-          set -e
-          find . -name '*.tex' | while read -r texfile; do
-            dir=$(dirname "$texfile")
-            base=$(basename "$texfile")
-            echo "Compiling $texfile"
-            pdflatex -halt-on-error -interaction=nonstopmode -output-directory "$dir" "$texfile" || {
-              echo "LaTeX compilation failed: $texfile"
+          set -eo pipefail
+          find . -type f -name '*.tex' | while IFS= read -r texfile; do
+            echo "::group::Compiling $texfile"
+            dir="$(dirname "$texfile")"
+            base="$(basename "$texfile")"
+            pdflatex -interaction=nonstopmode -halt-on-error -output-directory "$dir" "$texfile" >"$dir/compile.log" 2>&1 || {
+              echo "::error::LaTeX failed on $texfile"
+              cat "$dir/compile.log"
               exit 1
             }
+            echo "::endgroup::"
           done
 
       - name: Commit and push all PDFs

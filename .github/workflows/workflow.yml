@@ -1,4 +1,4 @@
-name: Compile and Commit All PDFs with XeLaTeX (Full TeX Live)
+name: Compile and Commit All PDFs with XeLaTeX (Full TikZ + Shell Escape)
 
 on:
   push:
@@ -21,19 +21,19 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Install Full TeX Live (includes TikZ, tcolorbox, xcolor, etc.)
+      - name: Install Full TeX Live
         run: |
           sudo apt-get update
           sudo apt-get install -y texlive-full
 
-      - name: Compile all .tex with XeLaTeX
+      - name: Compile all .tex with XeLaTeX and shell escape
         shell: bash
         run: |
           set -eo pipefail
           find . -type f -name '*.tex' | while IFS= read -r texfile; do
             dir=$(dirname "$texfile")
             echo "::group::Compiling $texfile"
-            xelatex -interaction=nonstopmode -halt-on-error -output-directory "$dir" "$texfile" >"$dir/compile.log" 2>&1 || {
+            xelatex -shell-escape -interaction=nonstopmode -halt-on-error -output-directory "$dir" "$texfile" >"$dir/compile.log" 2>&1 || {
               echo "::error::Compilation failed: $texfile"
               cat "$dir/compile.log"
               exit 1
@@ -50,6 +50,6 @@ jobs:
             echo "No PDF changes to commit"
             exit 0
           fi
-          git commit -m "Auto-compile LaTeX PDFs with full XeLaTeX support"
+          git commit -m "Auto-compile all LaTeX PDFs with XeLaTeX and shell escape"
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
           git push origin HEAD:${{ github.ref_name }}

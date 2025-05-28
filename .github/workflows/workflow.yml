@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/xu-cheng/texlive-full:latest   # TeX Live 2024 pre-installed
 
     steps:
       - name: Checkout
@@ -16,23 +18,17 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Install Ghostscript
+        run: |
+          apt-get update
+          apt-get install -y ghostscript
+
       - name: Git Config
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Install TeX Live 2024
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y curl gnupg
-          curl -sL https://dl.cloudsmith.io/public/latexdevteam/texlive/cfg/setup/key.gpg.key \
-            | sudo tee /etc/apt/trusted.gpg.d/texlive.asc >/dev/null
-          echo "deb [arch=amd64] https://dl.cloudsmith.io/public/latexdevteam/texlive/debian/ stable main" \
-            | sudo tee /etc/apt/sources.list.d/texlive.list
-          sudo apt-get update
-          sudo apt-get install -y texlive-full
-
-      - name: Compile all .tex with XeLaTeX and shell escape
+      - name: Compile all .tex with XeLaTeX
         shell: bash
         run: |
           set -eo pipefail

@@ -18,8 +18,8 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Install TeX Live
         run: |
@@ -28,10 +28,15 @@ jobs:
 
       - name: Compile all .tex files
         run: |
+          set -e
           find . -name '*.tex' | while read -r texfile; do
             dir=$(dirname "$texfile")
-            filename=$(basename "$texfile")
-            pdflatex -output-directory "$dir" -interaction=nonstopmode "$texfile"
+            base=$(basename "$texfile")
+            echo "Compiling $texfile"
+            pdflatex -halt-on-error -interaction=nonstopmode -output-directory "$dir" "$texfile" || {
+              echo "LaTeX compilation failed: $texfile"
+              exit 1
+            }
           done
 
       - name: Commit and push all PDFs

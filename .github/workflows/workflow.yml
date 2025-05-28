@@ -26,7 +26,6 @@ jobs:
         with:
           root_file: |
             Frameworks/the_four_layer_cognition_engine/main.tex
-            # Add more paths if needed
           compiler: pdflatex
 
       - name: Commit and push all PDFs

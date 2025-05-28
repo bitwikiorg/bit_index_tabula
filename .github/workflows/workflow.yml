@@ -25,7 +25,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: |
-            Frameworks/the_four_layer_cognition_engine/main.tex
+            History/evolution_of_systems_science/main.tex
           compiler: pdflatex
 
       - name: Commit and push all PDFs

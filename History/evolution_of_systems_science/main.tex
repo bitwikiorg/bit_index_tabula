@@ -31,8 +31,8 @@
     \vspace*{\fill}\null\vfill
     \begin{tikzpicture}[remember picture, overlay]
         % Background Grid
-        \fill[pattern=Checkerboard, pattern color=secondary!50]
-      (current page.south west) rectangle (current page.north east);
+        [pattern=Dots, pattern color=secondary!50]
+    (current page.south west) rectangle (current page.north east);
       
         % Central Circle with Gradient
         \shade[ball color=primary] (current page.center) circle (6cm);

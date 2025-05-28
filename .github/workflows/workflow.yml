@@ -1,4 +1,4 @@
-name: Compile and Commit All LaTeX PDFs
+name: Raw Compile and Commit PDFs with pdfLaTeX
 
 on:
   push:
@@ -11,32 +11,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v3
         with:
           persist-credentials: false
 
-      - name: Set up Git
+      - name: Git Config
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Compile all LaTeX files using pdfLaTeX
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: |
-            History/evolution_of_systems_science/main.tex
-          compiler: pdflatex
+      - name: Install TeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
 
-      - name: Commit and push all PDFs
+      - name: Compile with pdflatex
+        run: |
+          pdflatex -interaction=nonstopmode -halt-on-error -output-directory Frameworks/the_four_layer_cognition_engine Frameworks/the_four_layer_cognition_engine/main.tex
+
+      - name: Commit and push
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          git add '**/*.pdf'
+          git add Frameworks/the_four_layer_cognition_engine/main.pdf
           if git diff --cached --quiet; then
             echo "No PDF changes to commit"
             exit 0
           fi
-          git commit -m "Auto-compile LaTeX PDFs on push"
+          git commit -m "Compiled with raw pdfLaTeX"
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
           git push origin HEAD:${{ github.ref_name }}

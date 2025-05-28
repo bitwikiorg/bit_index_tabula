@@ -71,7 +71,7 @@ LLMs represent a significant advancement in the field of natural language proces
 \subsection{LoRA Fine-Tuning}
 \textbf{Low-Rank Adaptation (LoRA)} is a parameter-efficient fine-tuning technique that adapts LLMs to specific domains or tasks without updating all parameters. Instead of retraining the entire model—which is computationally expensive—LoRA introduces trainable, low-rank matrices into certain layers of the model, typically within the attention or feedforward sublayers. 
 
-\subsubsection\{Purpose and Role.} LoRA serves as a mechanism for \textbf{efficient adaptation} rather than traditional knowledge retrieval or indexing. It selectively modifies a small subset of the Base LLM’s internal structure, enabling it to produce responses that are tailored to a particular domain while preserving the integrity and general-purpose knowledge of the original model.
+\subsubsection{Purpose and Role.} LoRA serves as a mechanism for \textbf{efficient adaptation} rather than traditional knowledge retrieval or indexing. It selectively modifies a small subset of the Base LLM’s internal structure, enabling it to produce responses that are tailored to a particular domain while preserving the integrity and general-purpose knowledge of the original model.
 
 \subsubsection{Mechanism of Low-Rank Adaptation.} The core idea behind LoRA is to \textbf{approximate the updates to the model's weights} by decomposing them into low-rank matrices. Specifically, it replaces a weight matrix WWW with:
 \[

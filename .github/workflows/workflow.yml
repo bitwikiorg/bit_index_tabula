@@ -33,14 +33,21 @@ jobs:
           find . -type f -name '*.tex' | while IFS= read -r texfile; do
             dir=$(dirname "$texfile")
             echo "::group::Compiling $texfile"
+            # Print TikZ version and loaded libraries for debugging
+            echo "\\documentclass{article}\\usepackage{tikz}\\begin{document}\\pgfversion\\end{document}" > tikzversion.tex
+            xelatex -interaction=nonstopmode tikzversion.tex
+            cat tikzversion.log | grep "Package: tikz" || true
+            
             for i in 1 2; do
+              echo "Running XeLaTeX pass $i on $texfile"
               xelatex -file-line-error -shell-escape -interaction=nonstopmode -halt-on-error \
-                -output-directory "$dir" "$texfile" >>"$dir/compile.log" 2>&1 || {
-                echo "::error::Compilation failed: $texfile"
-                cat "$dir/compile.log"
+                -output-directory "$dir" "$texfile" || {
+                echo "::error::Compilation failed: $texfile on pass $i"
+                cat "$dir/$(basename "$texfile" .tex).log"
                 exit 1
               }
             done
+            echo "Successfully compiled $texfile"
             echo "::endgroup::"
           done
 

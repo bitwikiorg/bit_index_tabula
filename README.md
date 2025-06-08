@@ -19,7 +19,7 @@ The *BIT Index Tabula* serves as the formal publication platform for the BITcore
 > |---|---|---|
 > | 1 | [The Evolution of Systems Science](https://github.com/bitwikiorg/bit_index_tabula/blob/main/History/evolution_of_systems_science/main.pdf) | History |
 > | 2 | [The Fundamental Equation of Ethical AI](https://github.com/bitwikiorg/bit_index_tabula/blob/main/Invariants/fundamental_equation/main.pdf) | Invariant |
-> | 3 | [The Four Layer Cognition Engine](https://github.com/bitwikiorg/bit_index_tabula/blob/main/Frameworks/the_four_layer_cognition_engine/main.pdf) | Frameworks |
+> | 3 | [The Four Layer Cognition Engine](https://github.com/bitwikiorg/bit_index_tabula/blob/main/Frameworks/the_four_layer_cognition_engine/main.pdf) | Framework |
 > | 4 | [Agentic AI via Genotype Phenotype Signaling](https://github.com/bitwikiorg/bit_index_tabula/blob/main/Frameworks/genotypes_signal_molecules/main.pdf) | Framework |
 > 
 

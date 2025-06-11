@@ -6,7 +6,7 @@ The *BIT Index Tabula* serves as the formal publication platform for the BITcore
 > ## Objectives:
 > 1. > Disseminate rigorously reviewed, high-impact research.
 > 2. > Establish BIT Index as a leading center for systems-based knowledge.
-> 3. >  Ensure methodological integrity in all contributions.
+> 3. > Ensure methodological integrity in all contributions.
 
 
 ---
@@ -30,7 +30,7 @@ The *BIT Index Tabula* serves as the formal publication platform for the BITcore
 > - Manuscripts must align with the journal’s scope and structure
 > - Work must be original, unpublished, and methodologically sound
 > - Adhere to official formatting and citation rules
-> - To start you mmust first be a part of the [BIT Hub](http://hub.bitwiki.org/) find more information on submitting here.
+> - To start you must first be a part of the [BIT Hub](http://hub.bitwiki.org/) find more information on submitting here.
 
 > ### Submmission Flow
 > 1 [Pull Request with Paper under main.tex organized in its respective folders] --> 2 [Review by Our Team and Community] --> 3 [Comments and Return or Submission]

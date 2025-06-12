@@ -14,7 +14,8 @@ The *BIT Index Tabula* serves as the formal publication platform for the BITcore
 ## INDEX TABLE
 
 > Volume 1
-> This Volume set initializes our overall ecosystem research objectives. This is still a draft in progress.
+> 
+> This Volume set initializes our overall ecosystem research objectives. This is still a work in progress. We are still porting our context and reviewing it. Consider these as early drafts for our research context.
 >
 > | Issue | Cover | Title | Category | LoC in Tex | Size PDF in Pages | Draft Status |
 > |---|---|---|---|---|---|---|

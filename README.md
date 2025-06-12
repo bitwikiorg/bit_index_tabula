@@ -15,12 +15,13 @@ The *BIT Index Tabula* serves as the formal publication platform for the BITcore
 
 > Volume 1
 >
-> | Number | Title | Category | LoC in Tex | Size PDF in Pages |
-> |---|---|---|---|---|
-> | 1 | [The Evolution of Systems Science](https://github.com/bitwikiorg/bit_index_tabula/blob/main/History/evolution_of_systems_science/main.pdf) | History | 973 | 25 |
-> | 2 | [The Fundamental Equation of Ethical AI](https://github.com/bitwikiorg/bit_index_tabula/blob/main/Invariants/fundamental_equation/main.pdf) | Invariant | 373 | 11 |
-> | 3 | [The Four Layer Cognition Engine](https://github.com/bitwikiorg/bit_index_tabula/blob/main/Frameworks/the_four_layer_cognition_engine/main.pdf) | Framework | 290 | 12 |
-> | 4 | [Agentic AI via Genotype Phenotype Signaling](https://github.com/bitwikiorg/bit_index_tabula/blob/main/Frameworks/genotypes_signal_molecules/main.pdf) | Framework | 135 | 3 |
+> | Number | Title | Category | LoC in Tex | Size PDF in Pages | Draft Status |
+> |---|---|---|---|---|---|
+> | 1 | [The Evolution of Systems Science](https://github.com/bitwikiorg/bit_index_tabula/blob/main/History/evolution_of_systems_science/main.pdf) | History | 973 | 25 | Complete |
+> | 2 | [The Fundamental Equation of Ethical AI](https://github.com/bitwikiorg/bit_index_tabula/blob/main/Invariants/fundamental_equation/main.pdf) | Invariant | 373 | 11 | 99.9% |
+> | 3 | [The Human-AI Symbiosis Constant](https://github.com/bitwikiorg/bit_index_tabula/blob/main/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.pdf) | Framework | 649 | 38 | 60% |
+> | 4 | [The Four Layer Cognition Engine](https://github.com/bitwikiorg/bit_index_tabula/blob/main/Frameworks/the_four_layer_cognition_engine/main.pdf) | Framework | 290 | 12 | Complete |
+> | 5 | [Agentic AI via Genotype Phenotype Signaling](https://github.com/bitwikiorg/bit_index_tabula/blob/main/Frameworks/genotypes_signal_molecules/main.pdf) | Framework | 135 | 3 | 80% |
 > 
 
 ---

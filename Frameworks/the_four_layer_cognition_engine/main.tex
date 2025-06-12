@@ -1,18 +1,163 @@
 \documentclass{article}
+
+% --------------------------------------------------------------------------
+% CORE PACKAGES
+% --------------------------------------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage{fullpage}
 \usepackage{authblk}
-\usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{titling}      % lets us access \thetitle inside TikZ
+\usepackage{natbib}
+
+% --------------------------------------------------------------------------
+% COLOUR / GRAPHICS
+% --------------------------------------------------------------------------
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning}
+
+% --------------------------------------------------------------------------
+% META-DATA (used only on the cover)
+% --------------------------------------------------------------------------
+\title{\textbf{The Four-Layer Cognition Engine Framework}\\[-2pt]
+       \large An Integrative Hylomorphic AI Cognitive Architecture Integrating\\
+       Structure, Knowledge, Reasoning and Execution}
+\author{iamcapote}
+\affil{Bit Index Tabula}
+\date{}  % leave empty (date goes in the plaque)
+
+% --------------------------------------------------------------------------
+\begin{document}
+% --------------------------------------------------------------------------
+
+% --------------------------------------------------------------------------
+% COVER PAGE
+% --------------------------------------------------------------------------
+% ---------------------------------------------------------------------------
+%                              COVER PAGE
+% ---------------------------------------------------------------------------
+\begin{titlepage}\centering
+% -------- palette -----------------------------------------------------------
+\definecolor{DeepBG}{HTML}{05071B}   % midnight navy
+\definecolor{GridDot}{HTML}{40486C}  % subtle grid dots
+\definecolor{ClrLLM}{HTML}{3AB0FF}   % cyan  – Base LLM
+\definecolor{ClrLoRA}{HTML}{F9C80E}  % amber – LoRA
+\definecolor{ClrAgent}{HTML}{FF5E5B} % coral – Agent
+\definecolor{ClrUser}{HTML}{FFFFFF}  % white – User 
+\definecolor{TelosGray}{HTML}{9E9E9E}   % medium-grey-Telos
+
+% one spot to adjust ring radii / widths ------------------------------------
+\newcommand*\RadUser {1.8cm}
+\newcommand*\RadLLM  {3.4cm}
+\newcommand*\RadLoRA {5.2cm}
+\newcommand*\RadAgent{7.0cm}
+
+\newcommand*\ThkUser { 8}   % pt
+\newcommand*\ThkLLM  {12}
+\newcommand*\ThkLoRA {15}
+\newcommand*\ThkAgent{15}
+
+% -------- helper: boxed label ----------------------------------------------
+\tikzset{
+  labelbox/.style={
+    align=center,
+    font=\bfseries\footnotesize,
+    inner xsep=4pt, inner ysep=2pt,
+    rounded corners=2pt,
+    draw=#1!70, fill=#1!12,
+    text=DeepBG
+  }
+}
+
+\begin{tikzpicture}[remember picture,overlay]
+% ====== BACKGROUND ==========================================================
+  \fill[DeepBG] (current page.south west) rectangle (current page.north east);
+
+  \foreach \x in {-17,...,17}
+    \foreach \y in {-25,...,25}
+      \fill[GridDot!65,opacity=.35]
+           ($(current page.center)+(\x*0.7,\y*0.7)$) circle (0.05);
+
+  \shade[inner color=ClrLLM!14,outer color=ClrLLM!02]
+        (current page.center) circle (\RadAgent+2cm);
+
+% ====== CONCENTRIC RINGS ====================================================
+  \draw[line width=\ThkAgent pt,ClrAgent] (current page.center) circle(\RadAgent);
+  \draw[line width=\ThkLoRA  pt,ClrLoRA ] (current page.center) circle(\RadLoRA );
+  \draw[line width=\ThkLLM   pt,ClrLLM  ] (current page.center) circle(\RadLLM  );
+  \draw[line width=\ThkUser  pt,ClrUser ] (current page.center) circle(\RadUser );
+
+% ====== LABEL BOXES =========================================================
+  % User (centre)
+  \node[labelbox=ClrUser,fill=ClrUser!25] at (current page.center)
+        {User\\\textcolor{TelosGray}{Telos}};
+
+  % Base LLM
+  \node[labelbox=ClrLLM] at ($(current page.center)+(200:\RadLLM)$)
+        {Base LLM\\\textcolor{ClrLLM}{Hylē}};
+
+  % LoRA
+  \node[labelbox=ClrLoRA] at ($(current page.center)+(90:\RadLoRA+.5cm)$)
+        {LoRA\\\textcolor{ClrLoRA}{Morphe}};
+
+  % Agent
+  \node[labelbox=ClrAgent] at ($(current page.center)+( 25:\RadAgent+.6cm)$)
+        {Agent\\\textcolor{ClrAgent}{Nous}};
+
+% ====== TITLE BANNER ========================================================
+  % coloured brand stripe
+  \fill[ClrAgent] ($(current page.north west)+(1.5cm,-1.7cm)$)
+                  rectangle ++(5pt,-1.45cm);
+
+  \node[anchor=north west,
+        fill=ClrAgent!18!DeepBG,
+        text=white,
+        rounded corners=6pt,
+        minimum width=.72\paperwidth,
+        inner sep=10pt,
+        font=\bfseries]                           % default size for first line
+        (titlebox) at ($(current page.north west)+(1.5cm,-1.7cm)$)
+        {\begin{tabular}{@{}l@{}}
+           \Large The Four-Layer Cognition Engine Framework\\[-2pt]
+           \footnotesize An Integrative Hylomorphic AI Architecture for:
+           \footnotesize Structure, Knowledge, Reasoning and Execution
+         \end{tabular}};
+
+% ====== FOOTER PLAQUE =======================================================
+  \node[anchor=south,
+        fill=ClrLLM!22!DeepBG,
+        text=white,
+        draw=ClrLLM!55,
+        rounded corners=3pt,
+        inner xsep=1.2em, inner ysep=6pt,
+        font=\bfseries\scriptsize]                % smaller than before
+        at ($(current page.south)+(0,2.3cm)$)
+        {White Paper — \today};
+\end{tikzpicture}
+
+\thispagestyle{empty}
+\end{titlepage}
+% --------------------------------------------------------------------------- 
+
+% ------------------------ END COVER ----------------------------------------
+
+
+% ===============================================================
+
 
 \title{\textbf{The Four-Layer Cognition Engine Framework}\\ 
 An Integrative Hylomorphic AI Cognitive Architecture Integrating Structure, Knowledge, Reasoning and Execution.}
 \author{iamcapote}
 \affil{Bit Index Tabula}
 \date{}
-\begin{document}
+
+
+% 
+
+
 \maketitle
 
 \begin{abstract}
@@ -229,7 +374,7 @@ Another subtle issue is consistency in multi-turn dialogues. Our formal model de
 The separation of concerns in our model shares similarities with several existing AI paradigms:
 \begin{itemize}
     \item \textbf{Neuro-Symbolic Systems:} These approaches combine neural networks (for perception or language) with symbolic reasoning modules. Our LLM is the neural component while the Philosopher agent plays the role of a symbolic reasoner (even if it uses language itself to do so). Projects like Google’s \emph{Chess} system or IBM’s Neuro-Symbolic AI have similarly motivated splitting tasks into sub-symbolic and symbolic parts. Our contribution is framing this split within a clear four-part structure with philosophical interpretation, which is novel.
-    \item \textbf{Cognitive Architectures:} In classic cognitive science (e.g., SOAR, ACT-R), an architecture often includes memory modules, rule-based decision modules, etc. Our Library+Philosopher+LLM combination can be seen as a modern, learning-based cognitive architecture. Recently, \cite{Spivack2024CogAI} (as referenced in "Cognition is All You Need") proposed that LLMs need a cognitive layer above, aligning with our Philosopher layer concept:contentReference[oaicite:35]{index=35}. However, their design was dual-layer. By splitting knowledge (Library) and reasoning (Agent) explicitly, we achieve a finer granularity that allows each part to be optimized and analyzed more independently. It also echoes the triadic semiotic structure (sign, object, interpretant) by not conflating the knowledge source with the reasoning process.
+    \item \textbf{Cognitive Architectures:} In classic cognitive science (e.g., SOAR, ACT-R), an architecture often includes memory modules, rule-based decision modules, etc. Our Library+Philosopher+LLM combination can be seen as a modern, learning-based cognitive architecture. Recently, \citet{Spivack2024CogAI} (as referenced in "Cognition is All You Need") proposed that LLMs need a cognitive layer above, aligning with our Philosopher layer concept:contentReference[oaicite:35]{index=35}. However, their design was dual-layer. By splitting knowledge (Library) and reasoning (Agent) explicitly, we achieve a finer granularity that allows each part to be optimized and analyzed more independently. It also echoes the triadic semiotic structure (sign, object, interpretant) by not conflating the knowledge source with the reasoning process.
     \item \textbf{Tool-augmentation and Agents (e.g., ReAct, LangChain):} Recently, prompt engineering patterns like ReAct combine reasoning and action (tool use) by interleaving an LLM's chain-of-thought with API calls. Frameworks like LangChain provide a way to structure such multi-step AI reasoning. Our model formalizes something similar: the Philosopher agent is essentially performing a thought-act loop (thought = plan/check, act = call library or LLM) not unlike ReAct. The key difference is that we conceptualize it at the architectural level with dedicated components rather than implicitly via a single LLM prompt. This clarity could allow more robust implementations (for instance, the agent could even be a small program or a separate model specialized for planning). Another difference is our emphasis on metaphysical alignment: while LangChain pipelines are ad hoc, our approach was to derive the pipeline structure from first principles (causal roles, meaning-making, etc.). This means our agent is not just a heuristic; it's justified by reference to how knowledge and answers must relate.
 \end{itemize}
 

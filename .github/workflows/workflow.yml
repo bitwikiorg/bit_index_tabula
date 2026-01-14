@@ -1,69 +1,41 @@
-name: Compile and Commit All PDFs with XeLaTeX
+name: Deploy Static Site to GitHub Pages
 
 on:
   push:
+    branches: ["main"]
     paths:
-      - '**.tex'
+      - 'site/**'
   workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/xu-cheng/texlive-full:latest   # TeX Live 2024, Alpine base
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          persist-credentials: false # Keep this false for token-based auth later
+          path: './site' # Deploys the 'site' folder as the root
 
-      - name: Install Ghostscript
-        run: apk add --no-cache ghostscript   # Alpine uses apk, not apt
-
-      - name: Git Config
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          # Add the repository to Git's safe directories
-          git config --global --add safe.directory ${GITHUB_WORKSPACE}
-
-      - name: Compile all .tex with XeLaTeX
-        shell: bash
-        run: |
-          set -eo pipefail
-          find . -type f -name '*.tex' | while IFS= read -r texfile; do
-            dir=$(dirname "$texfile")
-            echo "::group::Compiling $texfile"
-            # Print TikZ version and loaded libraries for debugging
-            echo "\\documentclass{article}\\usepackage{tikz}\\begin{document}\\pgfversion\\end{document}" > tikzversion.tex
-            xelatex -interaction=nonstopmode tikzversion.tex > /dev/null 2>&1 # Suppress tikzversion.tex output unless it fails
-            cat tikzversion.log | grep "Package: tikz" || true
-            
-            for i in 1 2; do
-              echo "Running XeLaTeX pass $i on $texfile"
-              xelatex -file-line-error -shell-escape -interaction=nonstopmode -halt-on-error \
-                -output-directory "$dir" "$texfile" || {
-                echo "::error::Compilation failed: $texfile on pass $i"
-                # Attempt to cat the log file, but don't fail if it doesn't exist for some reason
-                cat "$dir/$(basename "$texfile" .tex).log" || echo "Log file not found for $texfile"
-                exit 1
-              }
-            done
-            echo "Successfully compiled $texfile"
-            echo "::endgroup::"
-          done
-
-      - name: Commit and push all PDFs
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
-        run: |
-          git add -A '**/*.pdf' # Use -A to stage all changes including deletions if any
-          if git diff --cached --quiet; then
-            echo "No PDF changes to commit."
-            exit 0
-          fi
-          git commit -m "Auto-compile LaTeX PDFs with XeLaTeX"
-          # Ensure the origin remote is set correctly for the push
-          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
-          git push origin HEAD:${{ github.ref_name }}
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Serve Site",
+      "type": "shell",
+      "command": "python3",
+      "args": ["-m", "http.server", "8080"],
+      "options": {
+        "cwd": "${workspaceFolder}/site"
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always"
+      }
+    }
+  ]
+}

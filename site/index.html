@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIT Index Tabula — Systems Theory Research</title>
+  <meta name="description" content="Official publication platform for the BITcore community, advancing research in systems theory, recursive modeling, and structural logic.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- KaTeX for Math -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/research.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%23333' stroke-width='3'/><circle cx='50' cy='50' r='8' fill='%23333'/></svg>">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="circumpunct">◉</span>
+        <span class="brand-text">BIT Index Tabula</span>
+      </div>
+      <div class="nav-links">
+        <a href="https://bitwiki.org" class="nav-link" target="_blank" rel="noopener">bitwiki.org</a>
+        <a href="https://hub.bitwiki.org" class="nav-link" target="_blank" rel="noopener">BIT Hub</a>
+        <a href="https://hub.bitwiki.org/welcome" class="nav-link" target="_blank" rel="noopener">Welcome</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="radial-gradient"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-symbol">
+        <svg viewBox="0 0 200 200" class="symbiosis-visual">
+          <defs>
+            <linearGradient id="humanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#2673e6"/>
+              <stop offset="100%" style="stop-color:#1a5cc8"/>
+            </linearGradient>
+            <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#28c88c"/>
+              <stop offset="100%" style="stop-color:#1fa070"/>
+            </linearGradient>
+          </defs>
+          <!-- Human Circle -->
+          <circle cx="70" cy="100" r="50" fill="url(#humanGrad)" opacity="0.85"/>
+          <!-- AI Circle -->
+          <circle cx="130" cy="100" r="50" fill="url(#aiGrad)" opacity="0.85"/>
+          <!-- Intersection -->
+          <clipPath id="intersect">
+            <circle cx="70" cy="100" r="50"/>
+          </clipPath>
+          <circle cx="130" cy="100" r="50" clip-path="url(#intersect)" fill="#8c50dc" opacity="0.9"/>
+          <!-- H = 1 -->
+          <text x="100" y="108" text-anchor="middle" fill="white" font-family="JetBrains Mono" font-size="18" font-weight="500">H = 1</text>
+        </svg>
+      </div>
+      <h1 class="hero-title">BIT Index Tabula</h1>
+      <p class="hero-subtitle">Official Journal of the BITcore Systems Network</p>
+      <p class="hero-tagline">Advancing research in systems theory, recursive modeling, and structural logic</p>
+      <div class="hero-equation">
+        <span class="equation-wrapper">$$H = \alpha H_{\text{human}} + \beta H_{\text{AI}}, \quad \alpha + \beta = 1$$</span>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Explore Research</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- About Section -->
+    <section class="section section-about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-marker">◯</span>
+          <h2>About the Journal</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lead">The <em>BIT Index Tabula</em> serves as the formal publication platform for the BITcore community, disseminating rigorously reviewed, high-impact research in systems theory and AI ethics.</p>
+            <div class="objectives">
+              <h3>Objectives</h3>
+              <ol>
+                <li>Disseminate rigorously reviewed, high-impact research</li>
+                <li>Establish BIT Index as a leading center for systems-based knowledge</li>
+                <li>Ensure methodological integrity in all contributions</li>
+              </ol>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">4,799</span>
+              <span class="stat-label">Lines of TeX</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">205</span>
+              <span class="stat-label">Pages in PDF</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">6</span>
+              <span class="stat-label">Research Papers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Index -->
+    <section class="section section-research" id="research">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-marker">◯</span>
+          <h2>Volume 1 — Research Index</h2>
+          <p class="section-desc">Initializing the ecosystem research objectives. Early drafts for the foundational research context.</p>
+        </div>
+
+        <!-- Research Grid -->
+        <div class="research-grid">
+          
+          <!-- Issue 1: Evolution of Systems Science -->
+          <article class="research-card featured" id="evolution-systems">
+            <div class="card-category">
+              <span class="category-tag history">History</span>
+              <span class="status-badge complete">99.9%</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">The Evolution of Systems Science</h3>
+              <p class="card-abstract">An in-depth exploration tracing the development of systems science from ancient philosophical inquiries through medieval scholasticism, the Enlightenment, and into modern cybernetics, game theory, and complexity science.</p>
+              <div class="card-meta">
+                <span class="meta-item"><strong>973</strong> LoC</span>
+                <span class="meta-item"><strong>25</strong> Pages</span>
+                <span class="meta-item">Issue 1</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/History/evolution_of_systems_science/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
+              <a href="research/evolution-systems.html" class="btn btn-secondary">View Details</a>
+            </div>
+          </article>
+
+          <!-- Issue 2: Biomimicry -->
+          <article class="research-card" id="biomimicry">
+            <div class="card-category">
+              <span class="category-tag framework">Framework</span>
+              <span class="status-badge progress">60%</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Biomimicry of Information Systems</h3>
+              <p class="card-abstract">Investigating the convergence of evolutionary biology and digital systems, demonstrating how principles of evolution—variation, selection, and inheritance—extend to the digital realm including AI models and blockchain networks.</p>
+              <div class="card-meta">
+                <span class="meta-item"><strong>2,234</strong> LoC</span>
+                <span class="meta-item"><strong>115</strong> Pages</span>
+                <span class="meta-item">3 Parts</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Frameworks/biomimicry/part1/main.pdf" class="btn btn-primary" target="_blank">Part 1</a>
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Frameworks/biomimicry/part2/main.pdf" class="btn btn-secondary" target="_blank">Part 2</a>
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Frameworks/biomimicry/part3/part3.pdf" class="btn btn-secondary" target="_blank">Part 3</a>
+              <a href="research/biomimicry.html" class="btn btn-secondary">View Details</a>
+            </div>
+          </article>
+
+          <!-- Issue 3: Fundamental Equation -->
+          <article class="research-card invariant" id="fundamental-equation">
+            <div class="card-category">
+              <span class="category-tag invariant">Invariant</span>
+              <span class="status-badge complete">99.9%</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">The Fundamental Equation of Ethical AI</h3>
+              <p class="card-abstract">A constitutional framework defining the Human-AI Symbiosis Constant <em>H</em> as the single invariant governing ethical AI behavior. The equation <em>H = αH<sub>human</sub> + βH<sub>AI</sub></em> where <em>α + β = 1</em> serves as the ethical control variable for all artificial agents.</p>
+              <div class="card-equation">
+                $$H = 1 \implies \text{Lawful State}$$
+              </div>
+              <div class="card-meta">
+                <span class="meta-item"><strong>373</strong> LoC</span>
+                <span class="meta-item"><strong>11</strong> Pages</span>
+                <span class="meta-item">Issue 3</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Invariants/fundamental_equation/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
+              <a href="research/fundamental-equation.html" class="btn btn-secondary">View Details</a>
+            </div>
+          </article>
+
+          <!-- Issue 4: Human-AI Symbiosis -->
+          <article class="research-card" id="symbiosis-constant">
+            <div class="card-category">
+              <span class="category-tag framework">Framework</span>
+              <span class="status-badge progress">60%</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">The Human-AI Symbiosis Constant</h3>
+              <p class="card-abstract">An equation-based ethical framework for adaptive AI proposing a novel approach where the H constant encapsulates mutually beneficial symbiosis. Integrates chaos theory, Lyapunov stability analysis, and strange attractors for ethical decision-making.</p>
+              <div class="card-meta">
+                <span class="meta-item"><strong>649</strong> LoC</span>
+                <span class="meta-item"><strong>38</strong> Pages</span>
+                <span class="meta-item">Issue 4</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
+              <a href="research/symbiosis-constant.html" class="btn btn-secondary">View Details</a>
+            </div>
+          </article>
+
+          <!-- Issue 5: Four-Layer Cognition Engine -->
+          <article class="research-card" id="cognition-engine">
+            <div class="card-category">
+              <span class="category-tag framework">Framework</span>
+              <span class="status-badge complete">99.9%</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">The Four-Layer Cognition Engine</h3>
+              <p class="card-abstract">An integrative hylomorphic AI cognitive architecture mapping Aristotle's four causes to AI layers: <strong>Hylē</strong> (Base LLM), <strong>Morphe</strong> (LoRA), <strong>Nous</strong> (Agent), and <strong>Telos</strong> (User). Validated through Peircean semiosis and Kantian frameworks.</p>
+              <div class="card-layers">
+                <span class="layer hyle">Hylē</span>
+                <span class="layer-arrow">→</span>
+                <span class="layer morphe">Morphe</span>
+                <span class="layer-arrow">→</span>
+                <span class="layer nous">Nous</span>
+                <span class="layer-arrow">→</span>
+                <span class="layer telos">Telos</span>
+              </div>
+              <div class="card-meta">
+                <span class="meta-item"><strong>435</strong> LoC</span>
+                <span class="meta-item"><strong>13</strong> Pages</span>
+                <span class="meta-item">Issue 5</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Frameworks/the_four_layer_cognition_engine/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
+              <a href="research/cognition-engine.html" class="btn btn-secondary">View Details</a>
+            </div>
+          </article>
+
+          <!-- Issue 6: Genotype-Phenotype Signaling -->
+          <article class="research-card" id="genotype-phenotype">
+            <div class="card-category">
+              <span class="category-tag framework">Framework</span>
+              <span class="status-badge early">40%</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Agentic AI via Genotype-Phenotype Signaling</h3>
+              <p class="card-abstract">A four-layered signaling model using YAML, XML, JSON, and Markdown as cognitive substrates spanning identity, logic, state, and memory—inspired by biological hormone, gene regulation, and neurotransmitter systems.</p>
+              <div class="card-signals">
+                <div class="signal yaml">YAML<span>Hormone</span></div>
+                <div class="signal xml">XML<span>Gene Reg.</span></div>
+                <div class="signal json">JSON<span>Neurotransmitter</span></div>
+                <div class="signal md">MD<span>Stem Cell</span></div>
+              </div>
+              <div class="card-meta">
+                <span class="meta-item"><strong>135</strong> LoC</span>
+                <span class="meta-item"><strong>3</strong> Pages</span>
+                <span class="meta-item">Issue 6</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Frameworks/genotypes_signal_molecules/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
+              <a href="research/genotype-phenotype.html" class="btn btn-secondary">View Details</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Domains Section -->
+    <section class="section section-domains" id="domains">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-marker">◯</span>
+          <h2>Primary Research Domains</h2>
+        </div>
+        <div class="domains-grid">
+          <div class="domain-card">
+            <div class="domain-icon">⊛</div>
+            <h4>Systems Theory & Recursive Models</h4>
+            <p>Exploring the interconnectedness of complex systems through recursive modeling and feedback loops.</p>
+          </div>
+          <div class="domain-card">
+            <div class="domain-icon">⊕</div>
+            <h4>Logic Structures & Adaptive Reasoning</h4>
+            <p>Formal logic frameworks for understanding emergent behaviors and adaptive decision-making.</p>
+          </div>
+          <div class="domain-card">
+            <div class="domain-icon">◎</div>
+            <h4>Pattern Formation & Structural Analysis</h4>
+            <p>Identifying and modeling patterns across biological and digital information systems.</p>
+          </div>
+          <div class="domain-card">
+            <div class="domain-icon">⊚</div>
+            <h4>Cognitive Systems</h4>
+            <p>Hylomorphic architectures bridging classical philosophy with modern AI cognitive frameworks.</p>
+          </div>
+          <div class="domain-card">
+            <div class="domain-icon">⊙</div>
+            <h4>Computational Frameworks</h4>
+            <p>Mathematical models for ethical AI governance and symbiotic human-machine interaction.</p>
+          </div>
+          <div class="domain-card">
+            <div class="domain-icon">⊘</div>
+            <h4>Structural Complexity & Reduction</h4>
+            <p>Methods for managing and understanding complexity through hierarchical and modular approaches.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Submission Guide -->
+    <section class="section section-submit" id="submit">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-marker">◯</span>
+          <h2>Submission Guide</h2>
+        </div>
+        <div class="submit-content">
+          <div class="submit-requirements">
+            <h3>Requirements</h3>
+            <ul>
+              <li>Manuscripts must align with the journal's scope and structure</li>
+              <li>Work must be original, unpublished, and methodologically sound</li>
+              <li>Adhere to official formatting and citation rules</li>
+              <li>Membership in <a href="https://hub.bitwiki.org" target="_blank">BIT Hub</a> required</li>
+            </ul>
+          </div>
+          <div class="submit-flow">
+            <h3>Submission Flow</h3>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <span class="step-num">1</span>
+                <span class="step-text">Pull Request with Paper (main.tex)</span>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step">
+                <span class="step-num">2</span>
+                <span class="step-text">Review by Team & Community</span>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step">
+                <span class="step-num">3</span>
+                <span class="step-text">Comments, Return, or Publication</span>
+              </div>
+            </div>
+            <p class="flow-note">Papers submitted in LaTeX auto-compile into PDFs via GitHub Actions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-visualization">
+      <div class="footer-grid"></div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="circumpunct">◉</span>
+        <span>BIT Index Tabula</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://bitwiki.org" target="_blank">bitwiki.org</a>
+        <a href="https://hub.bitwiki.org" target="_blank">BIT Hub</a>
+        <a href="https://github.com/bitwikiorg/bit_index_tabula" target="_blank">GitHub</a>
+      </div>
+      <div class="footer-equation">
+        <code>H = αH<sub>human</sub> + βH<sub>AI</sub> = 1</code>
+      </div>
+      <p class="footer-tagline">// BITcore Systems Network — Recursive Intelligence Architecture</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false}
+        ]
+      });
+    });
+  </script>
+</body>
+</html>

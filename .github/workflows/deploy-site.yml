@@ -27,14 +27,16 @@ jobs:
       - name: Prepare site with PDFs
         run: |
           # Create pdfs directory in site
-          mkdir -p site/pdfs
-          
-          # Copy all PDFs from volume-1 to site/pdfs
-          find volume-1 -name "*.pdf" -exec cp {} site/pdfs/ \;
-          
+          mkdir -p site/pdfs/volume-1
+
+          # Copy all PDFs from volume-1 to site/pdfs/volume-1, preserving structure
+          rsync -a --prune-empty-dirs \
+            --include '*/' --include '*.pdf' --exclude '*' \
+            volume-1/ site/pdfs/volume-1/
+
           # List copied PDFs for verification
-          echo "PDFs copied to site/pdfs:"
-          ls -la site/pdfs/ || echo "No PDFs found"
+          echo "PDFs copied to site/pdfs/volume-1:"
+          find site/pdfs/volume-1 -maxdepth 6 -name "*.pdf" -print || echo "No PDFs found"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -75,8 +75,8 @@ html {
 
 body {
   font-family: var(--font-serif);
-  font-size: 1.0625rem;
-  line-height: 1.7;
+  font-size: 1.125rem;
+  line-height: 1.75;
   color: var(--color-text);
   background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
@@ -159,6 +159,31 @@ code {
   color: var(--color-text-secondary);
   max-width: 600px;
   margin: var(--space-md) auto 0;
+}
+
+/* ============================================
+   Source Library
+   ============================================ */
+
+.section-source .section-desc {
+  max-width: 720px;
+}
+
+.source-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-xl);
+}
+
+.source-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
 }
 
 /* ============================================

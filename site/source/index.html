@@ -4,239 +4,707 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BIT Index Tabula — Source Library</title>
+  <meta name="description" content="Raw LaTeX and Markdown source files for BIT Index Tabula research papers. Machine-queryable, human-readable.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/research.css">
+  <link rel="stylesheet" href="../assets/css/source.css">
+  
+  <!-- Machine-readable JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Collection",
+    "name": "BIT Index Tabula Source Library",
+    "description": "Raw LaTeX and Markdown source files for systems theory research",
+    "publisher": {
+      "@type": "Organization",
+      "name": "BITcore Systems Network",
+      "url": "https://bitwiki.org"
+    },
+    "hasPart": [
+      {
+        "@type": "ScholarlyArticle",
+        "name": "The Evolution of Systems Science",
+        "encodingFormat": ["application/x-tex", "text/markdown"]
+      },
+      {
+        "@type": "ScholarlyArticle", 
+        "name": "Biomimicry of Information Systems",
+        "encodingFormat": ["application/x-tex", "text/markdown"]
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "The Fundamental Equation of Ethical AI",
+        "encodingFormat": ["application/x-tex", "text/markdown"]
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "The Human-AI Symbiosis Constant",
+        "encodingFormat": ["application/x-tex", "text/markdown"]
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "The Four-Layer Cognition Engine",
+        "encodingFormat": ["application/x-tex", "text/markdown"]
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Agentic AI via Genotype-Phenotype Signaling",
+        "encodingFormat": ["application/x-tex", "text/markdown"]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <!-- Navigation -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="../index.html" style="display: flex; align-items: center; gap: 0.5rem; border: none;">
+          <span class="circumpunct">◉</span>
+          <span class="brand-text">BIT Index Tabula</span>
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="../index.html#research" class="nav-link">Research</a>
+        <a href="#tex" class="nav-link">TeX Source</a>
+        <a href="#md" class="nav-link">Markdown</a>
+        <a href="https://github.com/bitwikiorg/bit_index_tabula" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
   <main class="main-content" style="padding-top: 96px;">
-    <section class="section">
+    <!-- Hero Section -->
+    <section class="section source-hero">
       <div class="container">
         <div class="section-header">
           <span class="section-marker">◯</span>
-          <h2>Source Library</h2>
-          <p class="section-desc">Raw LaTeX and 1:1 Markdown exports for direct copy/paste and citation.</p>
+          <h1>Source Library</h1>
+          <p class="section-desc">Raw LaTeX and 1:1 Markdown exports for direct copy/paste, citation, and machine parsing.</p>
         </div>
-        <div class="about-text" style="max-width: 980px; margin: 0 auto;">
-          <p class="lead">Raw sources are rendered inline for copy/paste. Use the copy button to capture the full file contents without downloading.</p>
+        
+        <div class="source-intro">
+          <div class="intro-card">
+            <div class="intro-icon">📄</div>
+            <h3>Human Readable</h3>
+            <p>Source code rendered inline with syntax context. Read the raw manuscripts directly in your browser.</p>
+          </div>
+          <div class="intro-card">
+            <div class="intro-icon">📋</div>
+            <h3>One-Click Copy</h3>
+            <p>Secure copy-to-clipboard. No downloads required. Paste directly into your editor or LLM context.</p>
+          </div>
+          <div class="intro-card">
+            <div class="intro-icon">🔗</div>
+            <h3>Machine Queryable</h3>
+            <p>Structured metadata for automated parsing. Schema.org annotations and consistent file paths.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <h3 id="tex">TeX Sources</h3>
+    <!-- Format Toggle -->
+    <section class="section format-toggle-section">
+      <div class="container">
+        <div class="format-tabs" role="tablist">
+          <button class="format-tab active" role="tab" aria-selected="true" data-target="tex">
+            <span class="tab-icon">⟨/⟩</span>
+            <span class="tab-label">TeX Sources</span>
+            <span class="tab-count">8 files</span>
+          </button>
+          <button class="format-tab" role="tab" aria-selected="false" data-target="md">
+            <span class="tab-icon">#</span>
+            <span class="tab-label">Markdown Mirrors</span>
+            <span class="tab-count">8 files</span>
+          </button>
+        </div>
+      </div>
+    </section>
 
-          <div class="source-block" data-src="tex/volume-1/History/evolution_of_systems_science/main.tex">
+    <!-- TeX Sources Section -->
+    <section class="section source-section" id="tex" data-format="tex">
+      <div class="container">
+        <div class="section-subheader">
+          <h2>TeX Sources</h2>
+          <p>Original LaTeX manuscripts as submitted. Preserved without transformation.</p>
+        </div>
+
+        <!-- History -->
+        <div class="source-category" data-category="history">
+          <h3 class="category-title"><span class="category-tag history">History</span></h3>
+          
+          <article class="source-block" data-src="tex/volume-1/History/evolution_of_systems_science/main.tex" data-doc="evolution-systems" data-format="tex" data-loc="973" data-pages="25">
             <div class="source-header">
-              <h4>Evolution of Systems Science</h4>
+              <div class="source-info">
+                <h4>The Evolution of Systems Science</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">973 LoC</span>
+                  <span class="meta-tag">25 Pages</span>
+                  <span class="meta-tag tex">LaTeX</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy TeX</button>
-                <a class="btn btn-secondary" href="tex/volume-1/History/evolution_of_systems_science/main.tex" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button" aria-label="Copy to clipboard">
+                  <svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span class="btn-text">Copy</span>
+                </button>
+                <a class="btn btn-secondary" href="tex/volume-1/History/evolution_of_systems_science/main.tex" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="tex/volume-1/History/evolution_of_systems_science/main.tex">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="tex/volume-1/History/evolution_of_systems_science/main.tex">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false">
+              <span class="expand-text">Show Source</span>
+              <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </article>
+        </div>
 
-          <div class="source-block" data-src="tex/volume-1/Frameworks/biomimicry/part1/main.tex">
+        <!-- Frameworks -->
+        <div class="source-category" data-category="framework">
+          <h3 class="category-title"><span class="category-tag framework">Frameworks</span></h3>
+
+          <article class="source-block" data-src="tex/volume-1/Frameworks/biomimicry/part1/main.tex" data-doc="biomimicry-1" data-format="tex">
             <div class="source-header">
-              <h4>Biomimicry — Part 1</h4>
+              <div class="source-info">
+                <h4>Biomimicry of Information Systems — Part 1</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">533 LoC</span>
+                  <span class="meta-tag">25 Pages</span>
+                  <span class="meta-tag tex">LaTeX</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy TeX</button>
-                <a class="btn btn-secondary" href="tex/volume-1/Frameworks/biomimicry/part1/main.tex" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="tex/volume-1/Frameworks/biomimicry/part1/main.tex" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="tex/volume-1/Frameworks/biomimicry/part1/main.tex">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="tex/volume-1/Frameworks/biomimicry/part1/main.tex">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
 
-          <div class="source-block" data-src="tex/volume-1/Frameworks/biomimicry/part2/main.tex">
+          <article class="source-block" data-src="tex/volume-1/Frameworks/biomimicry/part2/main.tex" data-doc="biomimicry-2" data-format="tex">
             <div class="source-header">
-              <h4>Biomimicry — Part 2</h4>
+              <div class="source-info">
+                <h4>Biomimicry of Information Systems — Part 2</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">438 LoC</span>
+                  <span class="meta-tag">20 Pages</span>
+                  <span class="meta-tag tex">LaTeX</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy TeX</button>
-                <a class="btn btn-secondary" href="tex/volume-1/Frameworks/biomimicry/part2/main.tex" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="tex/volume-1/Frameworks/biomimicry/part2/main.tex" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="tex/volume-1/Frameworks/biomimicry/part2/main.tex">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="tex/volume-1/Frameworks/biomimicry/part2/main.tex">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
 
-          <div class="source-block" data-src="tex/volume-1/Frameworks/biomimicry/part3/part3.tex">
+          <article class="source-block" data-src="tex/volume-1/Frameworks/biomimicry/part3/part3.tex" data-doc="biomimicry-3" data-format="tex">
             <div class="source-header">
-              <h4>Biomimicry — Part 3</h4>
+              <div class="source-info">
+                <h4>Biomimicry of Information Systems — Part 3</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">1263 LoC</span>
+                  <span class="meta-tag">70 Pages</span>
+                  <span class="meta-tag tex">LaTeX</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy TeX</button>
-                <a class="btn btn-secondary" href="tex/volume-1/Frameworks/biomimicry/part3/part3.tex" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="tex/volume-1/Frameworks/biomimicry/part3/part3.tex" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="tex/volume-1/Frameworks/biomimicry/part3/part3.tex">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="tex/volume-1/Frameworks/biomimicry/part3/part3.tex">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
 
-          <div class="source-block" data-src="tex/volume-1/Invariants/fundamental_equation/main.tex">
+          <article class="source-block" data-src="tex/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.tex" data-doc="symbiosis-constant" data-format="tex">
             <div class="source-header">
-              <h4>Fundamental Equation of Ethical AI</h4>
+              <div class="source-info">
+                <h4>The Human-AI Symbiosis Constant</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">649 LoC</span>
+                  <span class="meta-tag">38 Pages</span>
+                  <span class="meta-tag tex">LaTeX</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy TeX</button>
-                <a class="btn btn-secondary" href="tex/volume-1/Invariants/fundamental_equation/main.tex" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="tex/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.tex" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="tex/volume-1/Invariants/fundamental_equation/main.tex">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="tex/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.tex">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
 
-          <div class="source-block" data-src="tex/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.tex">
+          <article class="source-block" data-src="tex/volume-1/Frameworks/the_four_layer_cognition_engine/main.tex" data-doc="cognition-engine" data-format="tex">
             <div class="source-header">
-              <h4>Human-AI Symbiosis Constant</h4>
+              <div class="source-info">
+                <h4>The Four-Layer Cognition Engine</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">435 LoC</span>
+                  <span class="meta-tag">13 Pages</span>
+                  <span class="meta-tag tex">LaTeX</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy TeX</button>
-                <a class="btn btn-secondary" href="tex/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.tex" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="tex/volume-1/Frameworks/the_four_layer_cognition_engine/main.tex" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="tex/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.tex">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="tex/volume-1/Frameworks/the_four_layer_cognition_engine/main.tex">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
 
-          <div class="source-block" data-src="tex/volume-1/Frameworks/the_four_layer_cognition_engine/main.tex">
+          <article class="source-block" data-src="tex/volume-1/Frameworks/genotypes_signal_molecules/main.tex" data-doc="genotype-phenotype" data-format="tex">
             <div class="source-header">
-              <h4>Four-Layer Cognition Engine</h4>
+              <div class="source-info">
+                <h4>Agentic AI via Genotype-Phenotype Signaling</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">135 LoC</span>
+                  <span class="meta-tag">3 Pages</span>
+                  <span class="meta-tag tex">LaTeX</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy TeX</button>
-                <a class="btn btn-secondary" href="tex/volume-1/Frameworks/the_four_layer_cognition_engine/main.tex" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="tex/volume-1/Frameworks/genotypes_signal_molecules/main.tex" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="tex/volume-1/Frameworks/the_four_layer_cognition_engine/main.tex">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="tex/volume-1/Frameworks/genotypes_signal_molecules/main.tex">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
+        </div>
 
-          <div class="source-block" data-src="tex/volume-1/Frameworks/genotypes_signal_molecules/main.tex">
+        <!-- Invariants -->
+        <div class="source-category" data-category="invariant">
+          <h3 class="category-title"><span class="category-tag invariant">Invariants</span></h3>
+
+          <article class="source-block" data-src="tex/volume-1/Invariants/fundamental_equation/main.tex" data-doc="fundamental-equation" data-format="tex">
             <div class="source-header">
-              <h4>Genotype-Phenotype Signaling</h4>
+              <div class="source-info">
+                <h4>The Fundamental Equation of Ethical AI</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">373 LoC</span>
+                  <span class="meta-tag">11 Pages</span>
+                  <span class="meta-tag tex">LaTeX</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy TeX</button>
-                <a class="btn btn-secondary" href="tex/volume-1/Frameworks/genotypes_signal_molecules/main.tex" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="tex/volume-1/Invariants/fundamental_equation/main.tex" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="tex/volume-1/Frameworks/genotypes_signal_molecules/main.tex">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="tex/volume-1/Invariants/fundamental_equation/main.tex">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
 
-          <h3 id="md">Markdown Mirrors</h3>
+    <!-- Markdown Section -->
+    <section class="section source-section" id="md" data-format="md" style="display: none;">
+      <div class="container">
+        <div class="section-subheader">
+          <h2>Markdown Mirrors</h2>
+          <p>1:1 TeX-to-Markdown mirrors for direct copy/paste and text parsing. Identical content, portable format.</p>
+        </div>
 
-          <div class="source-block" data-src="md/volume-1/History/evolution_of_systems_science/main.md">
+        <!-- History -->
+        <div class="source-category" data-category="history">
+          <h3 class="category-title"><span class="category-tag history">History</span></h3>
+          
+          <article class="source-block" data-src="md/volume-1/History/evolution_of_systems_science/main.md" data-doc="evolution-systems" data-format="md" data-loc="973" data-pages="25">
             <div class="source-header">
-              <h4>Evolution of Systems Science</h4>
+              <div class="source-info">
+                <h4>The Evolution of Systems Science</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">973 LoC</span>
+                  <span class="meta-tag">25 Pages</span>
+                  <span class="meta-tag md">Markdown</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy Markdown</button>
-                <a class="btn btn-secondary" href="md/volume-1/History/evolution_of_systems_science/main.md" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="md/volume-1/History/evolution_of_systems_science/main.md" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="md/volume-1/History/evolution_of_systems_science/main.md">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="md/volume-1/History/evolution_of_systems_science/main.md">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
+        </div>
 
-          <div class="source-block" data-src="md/volume-1/Frameworks/biomimicry/part1/main.md">
+        <!-- Frameworks -->
+        <div class="source-category" data-category="framework">
+          <h3 class="category-title"><span class="category-tag framework">Frameworks</span></h3>
+
+          <article class="source-block" data-src="md/volume-1/Frameworks/biomimicry/part1/main.md" data-doc="biomimicry-1" data-format="md">
             <div class="source-header">
-              <h4>Biomimicry — Part 1</h4>
+              <div class="source-info">
+                <h4>Biomimicry of Information Systems — Part 1</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">533 LoC</span>
+                  <span class="meta-tag">25 Pages</span>
+                  <span class="meta-tag md">Markdown</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy Markdown</button>
-                <a class="btn btn-secondary" href="md/volume-1/Frameworks/biomimicry/part1/main.md" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="md/volume-1/Frameworks/biomimicry/part1/main.md" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="md/volume-1/Frameworks/biomimicry/part1/main.md">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="md/volume-1/Frameworks/biomimicry/part1/main.md">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
 
-          <div class="source-block" data-src="md/volume-1/Frameworks/biomimicry/part2/main.md">
+          <article class="source-block" data-src="md/volume-1/Frameworks/biomimicry/part2/main.md" data-doc="biomimicry-2" data-format="md">
             <div class="source-header">
-              <h4>Biomimicry — Part 2</h4>
+              <div class="source-info">
+                <h4>Biomimicry of Information Systems — Part 2</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">438 LoC</span>
+                  <span class="meta-tag">20 Pages</span>
+                  <span class="meta-tag md">Markdown</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy Markdown</button>
-                <a class="btn btn-secondary" href="md/volume-1/Frameworks/biomimicry/part2/main.md" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="md/volume-1/Frameworks/biomimicry/part2/main.md" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="md/volume-1/Frameworks/biomimicry/part2/main.md">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="md/volume-1/Frameworks/biomimicry/part2/main.md">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
 
-          <div class="source-block" data-src="md/volume-1/Frameworks/biomimicry/part3/part3.md">
+          <article class="source-block" data-src="md/volume-1/Frameworks/biomimicry/part3/part3.md" data-doc="biomimicry-3" data-format="md">
             <div class="source-header">
-              <h4>Biomimicry — Part 3</h4>
+              <div class="source-info">
+                <h4>Biomimicry of Information Systems — Part 3</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">1263 LoC</span>
+                  <span class="meta-tag">70 Pages</span>
+                  <span class="meta-tag md">Markdown</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy Markdown</button>
-                <a class="btn btn-secondary" href="md/volume-1/Frameworks/biomimicry/part3/part3.md" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="md/volume-1/Frameworks/biomimicry/part3/part3.md" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="md/volume-1/Frameworks/biomimicry/part3/part3.md">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="md/volume-1/Frameworks/biomimicry/part3/part3.md">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
 
-          <div class="source-block" data-src="md/volume-1/Invariants/fundamental_equation/main.md">
+          <article class="source-block" data-src="md/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.md" data-doc="symbiosis-constant" data-format="md">
             <div class="source-header">
-              <h4>Fundamental Equation of Ethical AI</h4>
+              <div class="source-info">
+                <h4>The Human-AI Symbiosis Constant</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">649 LoC</span>
+                  <span class="meta-tag">38 Pages</span>
+                  <span class="meta-tag md">Markdown</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy Markdown</button>
-                <a class="btn btn-secondary" href="md/volume-1/Invariants/fundamental_equation/main.md" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="md/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.md" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="md/volume-1/Invariants/fundamental_equation/main.md">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="md/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.md">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
 
-          <div class="source-block" data-src="md/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.md">
+          <article class="source-block" data-src="md/volume-1/Frameworks/the_four_layer_cognition_engine/main.md" data-doc="cognition-engine" data-format="md">
             <div class="source-header">
-              <h4>Human-AI Symbiosis Constant</h4>
+              <div class="source-info">
+                <h4>The Four-Layer Cognition Engine</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">435 LoC</span>
+                  <span class="meta-tag">13 Pages</span>
+                  <span class="meta-tag md">Markdown</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy Markdown</button>
-                <a class="btn btn-secondary" href="md/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.md" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="md/volume-1/Frameworks/the_four_layer_cognition_engine/main.md" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="md/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.md">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="md/volume-1/Frameworks/the_four_layer_cognition_engine/main.md">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
 
-          <div class="source-block" data-src="md/volume-1/Frameworks/the_four_layer_cognition_engine/main.md">
+          <article class="source-block" data-src="md/volume-1/Frameworks/genotypes_signal_molecules/main.md" data-doc="genotype-phenotype" data-format="md">
             <div class="source-header">
-              <h4>Four-Layer Cognition Engine</h4>
+              <div class="source-info">
+                <h4>Agentic AI via Genotype-Phenotype Signaling</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">135 LoC</span>
+                  <span class="meta-tag">3 Pages</span>
+                  <span class="meta-tag md">Markdown</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy Markdown</button>
-                <a class="btn btn-secondary" href="md/volume-1/Frameworks/the_four_layer_cognition_engine/main.md" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="md/volume-1/Frameworks/genotypes_signal_molecules/main.md" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="md/volume-1/Frameworks/the_four_layer_cognition_engine/main.md">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="md/volume-1/Frameworks/genotypes_signal_molecules/main.md">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
+        </div>
 
-          <div class="source-block" data-src="md/volume-1/Frameworks/genotypes_signal_molecules/main.md">
+        <!-- Invariants -->
+        <div class="source-category" data-category="invariant">
+          <h3 class="category-title"><span class="category-tag invariant">Invariants</span></h3>
+
+          <article class="source-block" data-src="md/volume-1/Invariants/fundamental_equation/main.md" data-doc="fundamental-equation" data-format="md">
             <div class="source-header">
-              <h4>Genotype-Phenotype Signaling</h4>
+              <div class="source-info">
+                <h4>The Fundamental Equation of Ethical AI</h4>
+                <div class="source-meta">
+                  <span class="meta-tag">373 LoC</span>
+                  <span class="meta-tag">11 Pages</span>
+                  <span class="meta-tag md">Markdown</span>
+                </div>
+              </div>
               <div class="source-actions">
-                <button class="btn btn-secondary copy-btn" type="button">Copy Markdown</button>
-                <a class="btn btn-secondary" href="md/volume-1/Frameworks/genotypes_signal_molecules/main.md" target="_blank">Open File</a>
+                <button class="btn btn-copy copy-btn" type="button"><svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="btn-text">Copy</span></button>
+                <a class="btn btn-secondary" href="md/volume-1/Invariants/fundamental_equation/main.md" target="_blank">Open Raw</a>
               </div>
             </div>
-            <pre><code class="source-code" data-src="md/volume-1/Frameworks/genotypes_signal_molecules/main.md">Loading…</code></pre>
-          </div>
+            <div class="source-preview collapsed">
+              <pre><code class="source-code" data-src="md/volume-1/Invariants/fundamental_equation/main.md">Loading…</code></pre>
+            </div>
+            <button class="source-expand" type="button" aria-expanded="false"><span class="expand-text">Show Source</span><svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
 
-          <p class="section-desc">Files are organized by volume and topic to match the repository structure.</p>
+    <!-- Conversion Guide -->
+    <section class="section conversion-guide">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-marker">◯</span>
+          <h2>TeX → Markdown Workflow</h2>
+          <p class="section-desc">The 1:1 conversion philosophy ensures that TeX source can be directly copied into a Markdown file.</p>
+        </div>
+        <div class="workflow-steps">
+          <div class="workflow-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Copy Source</h4>
+              <p>Use the copy button to capture the raw TeX content to your clipboard.</p>
+            </div>
+          </div>
+          <div class="workflow-arrow">→</div>
+          <div class="workflow-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Paste as Markdown</h4>
+              <p>Create a new <code>.md</code> file and paste the TeX directly. The structure is preserved.</p>
+            </div>
+          </div>
+          <div class="workflow-arrow">→</div>
+          <div class="workflow-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Parse & Query</h4>
+              <p>LLMs and text processors can now read the content without format barriers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="workflow-note">
+          <strong>Why 1:1?</strong> Mathematical notation in TeX (<code>$H = \alpha H_{human} + \beta H_{AI}$</code>) is already widely supported by Markdown renderers and LLM tokenizers. No lossy conversion needed.
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-visualization">
+      <div class="footer-grid"></div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="circumpunct">◉</span>
+        <span>BIT Index Tabula</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://bitwiki.org" target="_blank">bitwiki.org</a>
+        <a href="https://hub.bitwiki.org" target="_blank">BIT Hub</a>
+        <a href="https://github.com/bitwikiorg/bit_index_tabula" target="_blank">GitHub</a>
+      </div>
+      <div class="footer-equation">
+        <code>H = αH<sub>human</sub> + βH<sub>AI</sub> = 1</code>
+      </div>
+      <p class="footer-tagline">// BITcore Systems Network — Recursive Intelligence Architecture</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
   <script>
     (function() {
+      'use strict';
+      
+      // Format tabs switching
+      const formatTabs = document.querySelectorAll('.format-tab');
+      const sourceSections = document.querySelectorAll('.source-section');
+      
+      formatTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const target = tab.dataset.target;
+          
+          // Update tabs
+          formatTabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          
+          // Update sections
+          sourceSections.forEach(section => {
+            if (section.id === target) {
+              section.style.display = 'block';
+            } else {
+              section.style.display = 'none';
+            }
+          });
+          
+          // Update URL hash
+          history.replaceState(null, null, '#' + target);
+        });
+      });
+      
+      // Check URL hash on load
+      const hash = window.location.hash.slice(1);
+      if (hash === 'md') {
+        document.querySelector('[data-target="md"]')?.click();
+      }
+
+      // Source blocks - load content and setup interactions
       const blocks = document.querySelectorAll('.source-block');
 
       blocks.forEach((block) => {
         const code = block.querySelector('.source-code');
         const src = code?.dataset?.src;
         const copyButton = block.querySelector('.copy-btn');
+        const expandButton = block.querySelector('.source-expand');
+        const preview = block.querySelector('.source-preview');
 
         if (!src || !code) return;
 
+        // Fetch source content
         fetch(src)
           .then((response) => response.text())
           .then((text) => {
             code.textContent = text;
+            
+            // Setup copy functionality
             if (copyButton) {
               copyButton.addEventListener('click', async () => {
                 try {
                   await navigator.clipboard.writeText(text);
-                  copyButton.textContent = 'Copied';
-                  setTimeout(() => (copyButton.textContent = copyButton.dataset.label || 'Copy'), 1400);
+                  const iconCopy = copyButton.querySelector('.icon-copy');
+                  const iconCheck = copyButton.querySelector('.icon-check');
+                  const btnText = copyButton.querySelector('.btn-text');
+                  
+                  if (iconCopy) iconCopy.style.display = 'none';
+                  if (iconCheck) iconCheck.style.display = 'inline';
+                  if (btnText) btnText.textContent = 'Copied!';
+                  
+                  setTimeout(() => {
+                    if (iconCopy) iconCopy.style.display = 'inline';
+                    if (iconCheck) iconCheck.style.display = 'none';
+                    if (btnText) btnText.textContent = 'Copy';
+                  }, 2000);
                 } catch (err) {
-                  copyButton.textContent = 'Copy failed';
-                  setTimeout(() => (copyButton.textContent = copyButton.dataset.label || 'Copy'), 1400);
+                  console.error('Copy failed:', err);
                 }
               });
             }
           })
           .catch(() => {
-            code.textContent = 'Unable to load source.';
+            code.textContent = 'Unable to load source file.';
           });
 
-        if (copyButton) {
-          copyButton.dataset.label = copyButton.textContent;
+        // Setup expand/collapse
+        if (expandButton && preview) {
+          expandButton.addEventListener('click', () => {
+            const isExpanded = preview.classList.contains('expanded');
+            const expandText = expandButton.querySelector('.expand-text');
+            const expandIcon = expandButton.querySelector('.expand-icon');
+            
+            if (isExpanded) {
+              preview.classList.remove('expanded');
+              preview.classList.add('collapsed');
+              expandButton.setAttribute('aria-expanded', 'false');
+              if (expandText) expandText.textContent = 'Show Source';
+              if (expandIcon) expandIcon.style.transform = 'rotate(0deg)';
+            } else {
+              preview.classList.remove('collapsed');
+              preview.classList.add('expanded');
+              expandButton.setAttribute('aria-expanded', 'true');
+              if (expandText) expandText.textContent = 'Hide Source';
+              if (expandIcon) expandIcon.style.transform = 'rotate(180deg)';
+            }
+          });
         }
       });
     })();

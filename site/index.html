@@ -6,6 +6,12 @@
   <title>BIT Index Tabula — Systems Theory Research</title>
   <meta name="description" content="Official publication platform for the BITcore community, advancing research in systems theory, recursive modeling, and structural logic.">
   
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="BIT Index Tabula — Systems Theory Research">
+  <meta property="og:description" content="Official publication platform advancing research in systems theory, recursive modeling, and AI ethics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bitwikiorg.github.io/bit_index_tabula/">
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +28,61 @@
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%23333' stroke-width='3'/><circle cx='50' cy='50' r='8' fill='%23333'/></svg>">
+  
+  <!-- Machine-readable JSON-LD for Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Periodical",
+    "name": "BIT Index Tabula",
+    "alternateName": "BIT Tabula",
+    "description": "Official Journal of the BITcore Systems Network advancing research in systems theory, recursive modeling, and structural logic.",
+    "url": "https://bitwikiorg.github.io/bit_index_tabula/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "BITcore Systems Network",
+      "url": "https://bitwiki.org"
+    },
+    "issn": "pending",
+    "inLanguage": "en",
+    "keywords": ["systems theory", "recursive modeling", "AI ethics", "structural logic", "human-AI symbiosis", "cognitive architecture"],
+    "hasPart": [
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "evolution-systems-science",
+        "name": "The Evolution of Systems Science",
+        "headline": "An in-depth exploration tracing the development of systems science",
+        "author": {"@type": "Person", "name": "iamcapote"},
+        "isPartOf": {"@type": "PublicationVolume", "volumeNumber": "1"},
+        "pageStart": "1",
+        "pageEnd": "25",
+        "about": ["systems science", "cybernetics", "complexity science"]
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "fundamental-equation-ethical-ai",
+        "name": "The Fundamental Equation of Ethical AI",
+        "headline": "A Constitutional Framework for the Human-AI Symbiosis Constant H",
+        "author": {"@type": "Person", "name": "iamcapote"},
+        "isPartOf": {"@type": "PublicationVolume", "volumeNumber": "1"},
+        "pageStart": "1",
+        "pageEnd": "11",
+        "about": ["AI ethics", "human-AI symbiosis", "ethical framework"]
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "four-layer-cognition-engine",
+        "name": "The Four-Layer Cognition Engine",
+        "headline": "An Integrative Hylomorphic AI Cognitive Architecture",
+        "author": {"@type": "Person", "name": "iamcapote"},
+        "isPartOf": {"@type": "PublicationVolume", "volumeNumber": "1"},
+        "pageStart": "1",
+        "pageEnd": "13",
+        "about": ["cognitive architecture", "hylomorphism", "AI layers"]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Navigation -->
@@ -32,6 +93,8 @@
         <span class="brand-text">BIT Index Tabula</span>
       </div>
       <div class="nav-links">
+        <a href="#research" class="nav-link">Research</a>
+        <a href="source/index.html" class="nav-link">Source Library</a>
         <a href="https://bitwiki.org" class="nav-link" target="_blank" rel="noopener">bitwiki.org</a>
         <a href="https://hub.bitwiki.org" class="nav-link" target="_blank" rel="noopener">BIT Hub</a>
         <a href="https://hub.bitwiki.org/welcome" class="nav-link" target="_blank" rel="noopener">Welcome</a>
@@ -141,14 +204,14 @@
         <div class="research-grid">
           
           <!-- Issue 1: Evolution of Systems Science -->
-          <article class="research-card featured" id="evolution-systems">
+          <article class="research-card featured" id="evolution-systems" data-doc-id="evolution-systems-science" data-domain="history" data-status="complete" data-issue="1" data-loc="973" data-pages="25" data-pdf="pdfs/volume-1/History/evolution_of_systems_science/main.pdf" data-tex="source/tex/volume-1/History/evolution_of_systems_science/main.tex" data-md="source/md/volume-1/History/evolution_of_systems_science/main.md" itemscope itemtype="https://schema.org/ScholarlyArticle">
             <div class="card-category">
               <span class="category-tag history">History</span>
               <span class="status-badge complete">99.9%</span>
             </div>
             <div class="card-content">
-              <h3 class="card-title">The Evolution of Systems Science</h3>
-              <p class="card-abstract">An in-depth exploration tracing the development of systems science from ancient philosophical inquiries through medieval scholasticism, the Enlightenment, and into modern cybernetics, game theory, and complexity science.</p>
+              <h3 class="card-title" itemprop="name">The Evolution of Systems Science</h3>
+              <p class="card-abstract" itemprop="abstract">An in-depth exploration tracing the development of systems science from ancient philosophical inquiries through medieval scholasticism, the Enlightenment, and into modern cybernetics, game theory, and complexity science.</p>
               <div class="card-meta">
                 <span class="meta-item"><strong>973</strong> LoC</span>
                 <span class="meta-item"><strong>25</strong> Pages</span>
@@ -156,20 +219,22 @@
               </div>
             </div>
             <div class="card-actions">
-              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/History/evolution_of_systems_science/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
-              <a href="research/evolution-systems.html" class="btn btn-secondary">View Details</a>
+              <a href="pdfs/volume-1/History/evolution_of_systems_science/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
+              <a href="source/tex/volume-1/History/evolution_of_systems_science/main.tex" class="btn btn-secondary" target="_blank">Raw TeX</a>
+              <a href="source/md/volume-1/History/evolution_of_systems_science/main.md" class="btn btn-secondary" target="_blank">Raw MD</a>
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/tree/main/volume-1/History/evolution_of_systems_science" class="btn btn-secondary" target="_blank">View on GitHub</a>
             </div>
           </article>
 
           <!-- Issue 2: Biomimicry -->
-          <article class="research-card" id="biomimicry">
+          <article class="research-card" id="biomimicry" data-doc-id="biomimicry-information-systems" data-domain="framework" data-status="progress" data-issue="2" data-loc="2234" data-pages="115" data-pdf="pdfs/volume-1/Frameworks/biomimicry/part1/main.pdf" data-tex="source/tex/volume-1/Frameworks/biomimicry/part1/main.tex" data-md="source/md/volume-1/Frameworks/biomimicry/part1/main.md" itemscope itemtype="https://schema.org/ScholarlyArticle">
             <div class="card-category">
               <span class="category-tag framework">Framework</span>
               <span class="status-badge progress">60%</span>
             </div>
             <div class="card-content">
-              <h3 class="card-title">Biomimicry of Information Systems</h3>
-              <p class="card-abstract">Investigating the convergence of evolutionary biology and digital systems, demonstrating how principles of evolution—variation, selection, and inheritance—extend to the digital realm including AI models and blockchain networks.</p>
+              <h3 class="card-title" itemprop="name">Biomimicry of Information Systems</h3>
+              <p class="card-abstract" itemprop="abstract">Investigating the convergence of evolutionary biology and digital systems, demonstrating how principles of evolution—variation, selection, and inheritance—extend to the digital realm including AI models and blockchain networks.</p>
               <div class="card-meta">
                 <span class="meta-item"><strong>2,234</strong> LoC</span>
                 <span class="meta-item"><strong>115</strong> Pages</span>
@@ -177,22 +242,23 @@
               </div>
             </div>
             <div class="card-actions">
-              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Frameworks/biomimicry/part1/main.pdf" class="btn btn-primary" target="_blank">Part 1</a>
-              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Frameworks/biomimicry/part2/main.pdf" class="btn btn-secondary" target="_blank">Part 2</a>
-              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Frameworks/biomimicry/part3/part3.pdf" class="btn btn-secondary" target="_blank">Part 3</a>
-              <a href="research/biomimicry.html" class="btn btn-secondary">View Details</a>
+              <a href="pdfs/volume-1/Frameworks/biomimicry/part1/main.pdf" class="btn btn-primary" target="_blank">Part 1</a>
+              <a href="pdfs/volume-1/Frameworks/biomimicry/part2/main.pdf" class="btn btn-secondary" target="_blank">Part 2</a>
+              <a href="pdfs/volume-1/Frameworks/biomimicry/part3/part3.pdf" class="btn btn-secondary" target="_blank">Part 3</a>
+              <a href="source/tex/volume-1/Frameworks/biomimicry/part1/main.tex" class="btn btn-secondary" target="_blank">Raw TeX</a>
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/tree/main/volume-1/Frameworks/biomimicry" class="btn btn-secondary" target="_blank">View on GitHub</a>
             </div>
           </article>
 
           <!-- Issue 3: Fundamental Equation -->
-          <article class="research-card invariant" id="fundamental-equation">
+          <article class="research-card invariant" id="fundamental-equation" data-doc-id="fundamental-equation-ethical-ai" data-domain="invariant" data-status="complete" data-issue="3" data-loc="373" data-pages="11" data-pdf="pdfs/volume-1/Invariants/fundamental_equation/main.pdf" data-tex="source/tex/volume-1/Invariants/fundamental_equation/main.tex" data-md="source/md/volume-1/Invariants/fundamental_equation/main.md" itemscope itemtype="https://schema.org/ScholarlyArticle">
             <div class="card-category">
               <span class="category-tag invariant">Invariant</span>
               <span class="status-badge complete">99.9%</span>
             </div>
             <div class="card-content">
-              <h3 class="card-title">The Fundamental Equation of Ethical AI</h3>
-              <p class="card-abstract">A constitutional framework defining the Human-AI Symbiosis Constant <em>H</em> as the single invariant governing ethical AI behavior. The equation <em>H = αH<sub>human</sub> + βH<sub>AI</sub></em> where <em>α + β = 1</em> serves as the ethical control variable for all artificial agents.</p>
+              <h3 class="card-title" itemprop="name">The Fundamental Equation of Ethical AI</h3>
+              <p class="card-abstract" itemprop="abstract">A constitutional framework defining the Human-AI Symbiosis Constant <em>H</em> as the single invariant governing ethical AI behavior. The equation <em>H = αH<sub>human</sub> + βH<sub>AI</sub></em> where <em>α + β = 1</em> serves as the ethical control variable for all artificial agents.</p>
               <div class="card-equation">
                 $$H = 1 \implies \text{Lawful State}$$
               </div>
@@ -203,20 +269,22 @@
               </div>
             </div>
             <div class="card-actions">
-              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Invariants/fundamental_equation/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
-              <a href="research/fundamental-equation.html" class="btn btn-secondary">View Details</a>
+              <a href="pdfs/volume-1/Invariants/fundamental_equation/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
+              <a href="source/tex/volume-1/Invariants/fundamental_equation/main.tex" class="btn btn-secondary" target="_blank">Raw TeX</a>
+              <a href="source/md/volume-1/Invariants/fundamental_equation/main.md" class="btn btn-secondary" target="_blank">Raw MD</a>
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/tree/main/volume-1/Invariants/fundamental_equation" class="btn btn-secondary" target="_blank">View on GitHub</a>
             </div>
           </article>
 
           <!-- Issue 4: Human-AI Symbiosis -->
-          <article class="research-card" id="symbiosis-constant">
+          <article class="research-card" id="symbiosis-constant" data-doc-id="human-ai-symbiosis-constant" data-domain="framework" data-status="progress" data-issue="4" data-loc="649" data-pages="38" data-pdf="pdfs/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.pdf" data-tex="source/tex/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.tex" data-md="source/md/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.md" itemscope itemtype="https://schema.org/ScholarlyArticle">
             <div class="card-category">
               <span class="category-tag framework">Framework</span>
               <span class="status-badge progress">60%</span>
             </div>
             <div class="card-content">
-              <h3 class="card-title">The Human-AI Symbiosis Constant</h3>
-              <p class="card-abstract">An equation-based ethical framework for adaptive AI proposing a novel approach where the H constant encapsulates mutually beneficial symbiosis. Integrates chaos theory, Lyapunov stability analysis, and strange attractors for ethical decision-making.</p>
+              <h3 class="card-title" itemprop="name">The Human-AI Symbiosis Constant</h3>
+              <p class="card-abstract" itemprop="abstract">An equation-based ethical framework for adaptive AI proposing a novel approach where the H constant encapsulates mutually beneficial symbiosis. Integrates chaos theory, Lyapunov stability analysis, and strange attractors for ethical decision-making.</p>
               <div class="card-meta">
                 <span class="meta-item"><strong>649</strong> LoC</span>
                 <span class="meta-item"><strong>38</strong> Pages</span>
@@ -224,20 +292,22 @@
               </div>
             </div>
             <div class="card-actions">
-              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
-              <a href="research/symbiosis-constant.html" class="btn btn-secondary">View Details</a>
+              <a href="pdfs/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
+              <a href="source/tex/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.tex" class="btn btn-secondary" target="_blank">Raw TeX</a>
+              <a href="source/md/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant/main.md" class="btn btn-secondary" target="_blank">Raw MD</a>
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/tree/main/volume-1/Frameworks/The_%20HumanAI_Symbiosis_Constant" class="btn btn-secondary" target="_blank">View on GitHub</a>
             </div>
           </article>
 
           <!-- Issue 5: Four-Layer Cognition Engine -->
-          <article class="research-card" id="cognition-engine">
+          <article class="research-card" id="cognition-engine" data-doc-id="four-layer-cognition-engine" data-domain="framework" data-status="complete" data-issue="5" data-loc="435" data-pages="13" data-pdf="pdfs/volume-1/Frameworks/the_four_layer_cognition_engine/main.pdf" data-tex="source/tex/volume-1/Frameworks/the_four_layer_cognition_engine/main.tex" data-md="source/md/volume-1/Frameworks/the_four_layer_cognition_engine/main.md" itemscope itemtype="https://schema.org/ScholarlyArticle">
             <div class="card-category">
               <span class="category-tag framework">Framework</span>
               <span class="status-badge complete">99.9%</span>
             </div>
             <div class="card-content">
-              <h3 class="card-title">The Four-Layer Cognition Engine</h3>
-              <p class="card-abstract">An integrative hylomorphic AI cognitive architecture mapping Aristotle's four causes to AI layers: <strong>Hylē</strong> (Base LLM), <strong>Morphe</strong> (LoRA), <strong>Nous</strong> (Agent), and <strong>Telos</strong> (User). Validated through Peircean semiosis and Kantian frameworks.</p>
+              <h3 class="card-title" itemprop="name">The Four-Layer Cognition Engine</h3>
+              <p class="card-abstract" itemprop="abstract">An integrative hylomorphic AI cognitive architecture mapping Aristotle's four causes to AI layers: <strong>Hylē</strong> (Base LLM), <strong>Morphe</strong> (LoRA), <strong>Nous</strong> (Agent), and <strong>Telos</strong> (User). Validated through Peircean semiosis and Kantian frameworks.</p>
               <div class="card-layers">
                 <span class="layer hyle">Hylē</span>
                 <span class="layer-arrow">→</span>
@@ -254,20 +324,22 @@
               </div>
             </div>
             <div class="card-actions">
-              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Frameworks/the_four_layer_cognition_engine/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
-              <a href="research/cognition-engine.html" class="btn btn-secondary">View Details</a>
+              <a href="pdfs/volume-1/Frameworks/the_four_layer_cognition_engine/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
+              <a href="source/tex/volume-1/Frameworks/the_four_layer_cognition_engine/main.tex" class="btn btn-secondary" target="_blank">Raw TeX</a>
+              <a href="source/md/volume-1/Frameworks/the_four_layer_cognition_engine/main.md" class="btn btn-secondary" target="_blank">Raw MD</a>
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/tree/main/volume-1/Frameworks/the_four_layer_cognition_engine" class="btn btn-secondary" target="_blank">View on GitHub</a>
             </div>
           </article>
 
           <!-- Issue 6: Genotype-Phenotype Signaling -->
-          <article class="research-card" id="genotype-phenotype">
+          <article class="research-card" id="genotype-phenotype" data-doc-id="genotype-phenotype-signaling" data-domain="framework" data-status="early" data-issue="6" data-loc="135" data-pages="3" data-pdf="pdfs/volume-1/Frameworks/genotypes_signal_molecules/main.pdf" data-tex="source/tex/volume-1/Frameworks/genotypes_signal_molecules/main.tex" data-md="source/md/volume-1/Frameworks/genotypes_signal_molecules/main.md" itemscope itemtype="https://schema.org/ScholarlyArticle">
             <div class="card-category">
               <span class="category-tag framework">Framework</span>
               <span class="status-badge early">40%</span>
             </div>
             <div class="card-content">
-              <h3 class="card-title">Agentic AI via Genotype-Phenotype Signaling</h3>
-              <p class="card-abstract">A four-layered signaling model using YAML, XML, JSON, and Markdown as cognitive substrates spanning identity, logic, state, and memory—inspired by biological hormone, gene regulation, and neurotransmitter systems.</p>
+              <h3 class="card-title" itemprop="name">Agentic AI via Genotype-Phenotype Signaling</h3>
+              <p class="card-abstract" itemprop="abstract">A four-layered signaling model using YAML, XML, JSON, and Markdown as cognitive substrates spanning identity, logic, state, and memory—inspired by biological hormone, gene regulation, and neurotransmitter systems.</p>
               <div class="card-signals">
                 <div class="signal yaml">YAML<span>Hormone</span></div>
                 <div class="signal xml">XML<span>Gene Reg.</span></div>
@@ -281,8 +353,10 @@
               </div>
             </div>
             <div class="card-actions">
-              <a href="https://github.com/bitwikiorg/bit_index_tabula/blob/main/volume-1/Frameworks/genotypes_signal_molecules/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
-              <a href="research/genotype-phenotype.html" class="btn btn-secondary">View Details</a>
+              <a href="pdfs/volume-1/Frameworks/genotypes_signal_molecules/main.pdf" class="btn btn-primary" target="_blank">Read PDF</a>
+              <a href="source/tex/volume-1/Frameworks/genotypes_signal_molecules/main.tex" class="btn btn-secondary" target="_blank">Raw TeX</a>
+              <a href="source/md/volume-1/Frameworks/genotypes_signal_molecules/main.md" class="btn btn-secondary" target="_blank">Raw MD</a>
+              <a href="https://github.com/bitwikiorg/bit_index_tabula/tree/main/volume-1/Frameworks/genotypes_signal_molecules" class="btn btn-secondary" target="_blank">View on GitHub</a>
             </div>
           </article>
 
@@ -291,6 +365,33 @@
     </section>
 
     <!-- Domains Section -->
+    <section class="section section-source" id="source">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-marker">◯</span>
+          <h2>Source Library</h2>
+          <p class="section-desc">Machine-queryable, human-readable source exports. Every TeX manuscript is mirrored 1:1 in Markdown.</p>
+        </div>
+        <div class="source-grid">
+          <div class="source-card">
+            <h3>Raw TeX</h3>
+            <p>Original manuscripts as submitted, preserved without transformation.</p>
+            <a class="btn btn-secondary" href="source/index.html#tex">Browse TeX</a>
+          </div>
+          <div class="source-card">
+            <h3>Raw Markdown</h3>
+            <p>1:1 Markdown mirrors for direct copy/paste and text parsing.</p>
+            <a class="btn btn-secondary" href="source/index.html#md">Browse Markdown</a>
+          </div>
+          <div class="source-card">
+            <h3>Machine Metadata</h3>
+            <p>Structured attributes embedded in the research index for automated parsing.</p>
+            <a class="btn btn-secondary" href="#research">View Index</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-domains" id="domains">
       <div class="container">
         <div class="section-header">
